@@ -1,3 +1,10 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     --Purple50: hsl(260, 100%, 95%);
     --Purple300: hsl(264, 82%, 80%);
@@ -8,4 +15,55 @@
     --Grey500: rgb(72, 85, 106);
     --DarkBlue: rgb(25, 33, 46);
     --Black: rgb(18, 18, 18);
+}
+
+body {
+    background-color: var(--Grey100);
+}
+
+.container {
+    display: grid;
+    justify-items: center;
+    width: 80%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    /* grid-template-rows: repeat(2, auto); */
+}
+
+.student-image {
+    border-radius: 100%;
+}
+
+.testimonial {
+    border-radius: 1rem;
+    gap: 1rem;
+    padding: 1rem;
+    width: 1fr;
+    height: 1fr;
+}
+
+#daniel-clifford {
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-color: var(--Purple500);
+    grid-column: span 2;
+}
+
+#patrick-abrams {
+    background-color: var(--Black);
+    color: white;
+    grid-column: span 2;
+}
+
+#jonathon-walters {
+    background-color: var(--Grey400);
+}
+
+#jeanette-harmon {
+    background-color: white;
+}
+
+#kira-whittle {
+    background-color: white;
+    grid-row: span 2;
 }
