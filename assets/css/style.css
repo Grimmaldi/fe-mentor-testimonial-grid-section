@@ -17,53 +17,112 @@
     --Black: rgb(18, 18, 18);
 }
 
+@font-face {
+    font-family: 'BarlowSemiCondensed500';
+    src: url('../fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'BarlowSemiCondensed600';
+    src: url('../fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-SemiBold.ttf');
+}
+
 body {
+    display: grid;
+    min-height: 100vh;
     background-color: var(--Grey100);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-size: 13px;
+    font-family: 'BarlowSemiCondensed500';
 }
 
 .container {
+    margin: auto;
     display: grid;
-    justify-items: center;
-    width: 80%;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1rem;
-    /* grid-template-rows: repeat(2, auto); */
+    grid-template-columns: repeat(4, 20rem);
+    gap: 2rem;
+}
+
+figure {
+    display: flex;
 }
 
 .student-image {
+    display: grid;
     border-radius: 100%;
+    width: 2rem;
+    margin-right: 1rem;
+}
+
+.student-name {
+    font-family: 'BarlowSemiCondensed600';
+    font-size: 0.9rem;
+}
+
+.role {
+    font-size: 0.75rem;
 }
 
 .testimonial {
     border-radius: 1rem;
-    gap: 1rem;
-    padding: 1rem;
+    padding: 2.2rem;
     width: 1fr;
     height: 1fr;
+    box-shadow: 2em 1rem 3rem var(--Grey200);
+}
+
+.summary {
+    font-family: 'BarlowSemiCondensed600', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+
+.direct-quote {
+    margin-top: 1rem;
+    font-size: 1rem;
 }
 
 #daniel-clifford {
     background-image: url(../images/bg-pattern-quotation.svg);
     background-repeat: no-repeat;
+    background-size: 18%;
+    background-position-x: 89%;
     background-color: var(--Purple500);
+    color: var(--Purple300);
     grid-column: span 2;
+}
+
+#daniel-clifford .summary {
+    color: white;
+}
+
+#daniel-clifford .student-image {
+    border: 0.2rem solid var(--Purple300);
 }
 
 #patrick-abrams {
     background-color: var(--Black);
-    color: white;
+    color: var(--Grey200);
     grid-column: span 2;
 }
 
 #jonathon-walters {
     background-color: var(--Grey400);
+    color: var(--Grey200)
+}
+
+#jonathon-walters .summary {
+    color: white;
 }
 
 #jeanette-harmon {
     background-color: white;
+    color: var(--Grey400);
 }
 
 #kira-whittle {
     background-color: white;
     grid-row: span 2;
+    color: var(--Grey400);
 }
