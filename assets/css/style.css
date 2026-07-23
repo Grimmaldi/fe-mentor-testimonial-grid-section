@@ -33,7 +33,7 @@ body {
     background-color: var(--Grey100);
     background-repeat: no-repeat;
     background-size: 100%;
-    font-size: 13px;
+    font-size: 0.8rem;
     font-family: 'BarlowSemiCondensed500';
 }
 
