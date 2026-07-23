@@ -67,8 +67,6 @@ figure {
 .testimonial {
     border-radius: 1rem;
     padding: 2.2rem;
-    width: 1fr;
-    height: 1fr;
     box-shadow: 2em 1rem 3rem var(--Grey200);
 }
 
